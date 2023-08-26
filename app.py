@@ -1,8 +1,11 @@
 from flask import Flask
+from configuration import logfileConfigs
+
+
+
 
 app = Flask(__name__)
-
-
+logfileConfigs.logFileCongig()
 
 
 @app.route("/")
