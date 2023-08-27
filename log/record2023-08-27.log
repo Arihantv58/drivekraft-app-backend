@@ -1,0 +1,128 @@
+2023-08-27 10:41:02,735 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 10:41:02,736 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 10:41:02,745 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 10:41:03,475 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 10:41:03,485 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 10:41:06,753 INFO root Thread-2 (process_request_thread) : testt
+2023-08-27 10:41:06,758 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 10:41:06] "GET / HTTP/1.1" 200 -
+2023-08-27 10:43:37,194 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\otp\\otpService.py', reloading
+2023-08-27 10:43:37,310 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 10:43:38,053 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 10:43:38,066 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 10:45:23,538 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-27 10:45:26,053 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-27 10:45:26,061 INFO root Thread-2 (process_request_thread) : Template Send to 918284990439
+2023-08-27 10:45:26,061 INFO root Thread-2 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5AglMluSUyT645u8"}
+2023-08-27 10:45:26,061 INFO root Thread-2 (process_request_thread) : OTP :  591738 send to user
+2023-08-27 10:45:26,061 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 10:45:26] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-27 10:45:44,047 DEBUG urllib3.connectionpool Thread-3 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-27 10:45:44,997 DEBUG urllib3.connectionpool Thread-3 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-27 10:45:44,999 INFO root Thread-3 (process_request_thread) : Template Send to 918284990439
+2023-08-27 10:45:44,999 INFO root Thread-3 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5Agkmf_DDWYICaTs"}
+2023-08-27 10:45:44,999 INFO root Thread-3 (process_request_thread) : OTP :  568055 send to user
+2023-08-27 10:45:45,000 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 10:45:45] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-27 10:46:24,081 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 10:46:24] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-27 10:47:03,128 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 10:47:03,128 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 10:47:03,143 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 10:47:04,997 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 10:47:05,012 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 10:57:32,328 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 10:57:32,329 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 10:57:32,331 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 10:57:33,080 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 10:57:33,086 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 10:57:38,962 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-27 10:57:40,163 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-27 10:57:40,168 INFO root Thread-2 (process_request_thread) : Template Send to 918284990439
+2023-08-27 10:57:40,168 INFO root Thread-2 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5AgnOBNOeMN3gAa8"}
+2023-08-27 10:57:40,168 INFO root Thread-2 (process_request_thread) : OTP :  871605 send to user
+2023-08-27 10:57:40,344 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 10:57:40] "[35m[1mPOST /api/login-send-otp HTTP/1.1[0m" 500 -
+2023-08-27 10:58:41,481 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\user\\userDao.py', reloading
+2023-08-27 10:58:41,588 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 10:58:42,385 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 10:58:42,389 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 10:58:48,585 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 10:58:48,585 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 10:58:48,587 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 10:58:49,520 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 10:58:49,525 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 10:58:51,982 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-27 10:58:53,019 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-27 10:58:53,022 INFO root Thread-2 (process_request_thread) : Template Send to 918284990439
+2023-08-27 10:58:53,022 INFO root Thread-2 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5AgnUJTh1vVwKRuQ"}
+2023-08-27 10:58:53,022 INFO root Thread-2 (process_request_thread) : OTP :  371197 send to user
+2023-08-27 10:58:53,120 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 10:58:53] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-27 10:59:47,560 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\user\\userDao.py', reloading
+2023-08-27 10:59:47,637 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 10:59:48,516 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 10:59:48,519 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 11:01:12,566 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 11:01:12,566 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 11:01:12,566 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 11:01:14,896 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 11:01:14,910 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 11:01:27,828 DEBUG urllib3.connectionpool Thread-6 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-27 11:01:29,065 DEBUG urllib3.connectionpool Thread-6 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-27 11:01:29,067 INFO root Thread-6 (process_request_thread) : Template Send to 918284990439
+2023-08-27 11:01:29,067 INFO root Thread-6 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5AgmWD21lJsNkv4o"}
+2023-08-27 11:01:29,067 INFO root Thread-6 (process_request_thread) : OTP :  556871 send to user
+2023-08-27 11:03:24,249 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 11:03:24,249 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 11:03:24,249 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 11:03:26,608 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 11:03:26,625 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 11:03:40,888 DEBUG urllib3.connectionpool Thread-6 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-27 11:03:41,983 DEBUG urllib3.connectionpool Thread-6 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-27 11:03:42,003 INFO root Thread-6 (process_request_thread) : Template Send to 918284990439
+2023-08-27 11:03:42,003 INFO root Thread-6 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5Agni76j9s1l-v30"}
+2023-08-27 11:03:42,003 INFO root Thread-6 (process_request_thread) : OTP :  213599 send to user
+2023-08-27 12:34:50,584 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:34:50,585 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:34:50,589 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 12:34:51,366 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 12:34:51,370 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 12:34:57,073 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-27 12:34:58,594 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-27 12:34:58,597 INFO root Thread-2 (process_request_thread) : Template Send to 918284990439
+2023-08-27 12:34:58,597 INFO root Thread-2 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5AgkLKvyh9T5AZY8"}
+2023-08-27 12:34:58,598 INFO root Thread-2 (process_request_thread) : OTP :  290643 send to user
+2023-08-27 12:34:58,743 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:34:58] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-27 12:37:00,634 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\user\\userDao.py', reloading
+2023-08-27 12:37:00,728 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 12:37:01,700 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 12:37:01,708 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 12:37:07,894 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\user\\userDao.py', reloading
+2023-08-27 12:37:08,030 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 12:37:08,848 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 12:37:08,848 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 12:37:11,951 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\user\\userDao.py', reloading
+2023-08-27 12:37:12,087 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 12:37:13,022 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 12:37:13,022 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 12:37:15,103 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\user\\userDao.py', reloading
+2023-08-27 12:37:15,252 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 12:37:16,118 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 12:37:16,133 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 12:37:22,287 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\user\\userDao.py', reloading
+2023-08-27 12:37:22,395 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 12:37:50,031 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:37:50,031 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:37:50,045 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 12:37:50,865 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 12:37:50,870 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 12:37:52,809 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-27 12:37:53,958 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-27 12:37:53,960 INFO root Thread-2 (process_request_thread) : Template Send to 917889085355
+2023-08-27 12:37:53,961 INFO root Thread-2 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 917889085355@c.us","description":"Message has been sent to the provider","id":"gBEGkXiJCFNVAgmRV_e7vr546Pg"}
+2023-08-27 12:37:53,961 INFO root Thread-2 (process_request_thread) : OTP :  145234 send to user
+2023-08-27 12:37:54,015 INFO root Thread-2 (process_request_thread) : user with contact number 917889085355 created
+2023-08-27 12:37:54,034 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:37:54] "POST /api/login-send-otp HTTP/1.1" 200 -
