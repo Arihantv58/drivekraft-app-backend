@@ -6,7 +6,9 @@ from datetime import date
 def logFileCongig():
     dte = date.today()
     logging.basicConfig(filename='log/record' + str(dte) + '.log', level=logging.DEBUG,
-                        format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+                         format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+    # logging.basicConfig(filename='log/record' + '.log', level=logging.DEBUG,
+    #                      format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
     return
 
 

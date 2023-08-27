@@ -1,0 +1,8 @@
+2023-08-27 10:39:08,254 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 10:39:08,254 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 10:39:08,264 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-27 10:39:08,970 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-27 10:39:08,978 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-27 10:39:39,949 INFO root Thread-2 (process_request_thread) : testt
+2023-08-27 10:39:39,949 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 10:39:39] "GET / HTTP/1.1" 200 -
