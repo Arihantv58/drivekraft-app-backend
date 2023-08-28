@@ -20,6 +20,10 @@ def index():
 def sendOtp():
     return otpService.sendOtpInternally()
 
+@app.route("/api/login",methods=['POST'])
+def generateToken():
+    return otpService.generateTokenInternally()
+
 app.run(debug=True)
 
 

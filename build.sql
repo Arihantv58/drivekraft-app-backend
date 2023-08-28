@@ -21,3 +21,14 @@ CREATE TABLE otp(
         created CHAR(50),
         updated CHAR(50)
         )
+
+-- creating token table        
+CREATE TABLE token(
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        userId CHAR(20),
+        tokenvalue CHAR(70),
+        created CHAR(50),
+        expireAt CHAR(50)
+        )
+
+
