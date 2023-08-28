@@ -1,0 +1,39 @@
+2023-08-29 00:15:19,267 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-29 00:15:19,267 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-29 00:15:19,270 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-29 00:15:20,098 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-29 00:15:20,104 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-29 00:15:21,501 INFO root Thread-2 (process_request_thread) : 329227
+2023-08-29 00:15:21,502 INFO root Thread-2 (process_request_thread) : 329227
+2023-08-29 00:15:21,502 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [29/Aug/2023 00:15:21] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+2023-08-29 00:15:56,749 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\otp\\otpService.py', reloading
+2023-08-29 00:15:56,837 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-29 00:15:57,666 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-29 00:15:57,668 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-29 00:15:59,741 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\otp\\otpService.py', reloading
+2023-08-29 00:15:59,835 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-29 00:16:00,784 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-29 00:16:00,784 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-29 00:16:22,987 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-29 00:16:22,987 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-29 00:16:22,996 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-29 00:16:25,360 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-29 00:16:25,373 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-29 00:17:15,097 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-29 00:17:15,098 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-29 00:17:15,102 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-29 00:17:15,980 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-29 00:17:15,987 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-29 00:17:20,250 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-29 00:17:21,834 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-29 00:17:21,836 INFO root Thread-2 (process_request_thread) : Template Send to 918284990439
+2023-08-29 00:17:21,836 INFO root Thread-2 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5AgkOkSsmO9aDWtY"}
+2023-08-29 00:17:21,836 INFO root Thread-2 (process_request_thread) : OTP :  955937 send to user
+2023-08-29 00:17:21,917 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [29/Aug/2023 00:17:21] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-29 00:17:32,358 INFO root Thread-3 (process_request_thread) : 955937
+2023-08-29 00:17:32,358 INFO root Thread-3 (process_request_thread) : 955937
+2023-08-29 00:17:32,392 INFO root Thread-3 (process_request_thread) : token updated for user with contact number  :  918284990439
+2023-08-29 00:17:32,392 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [29/Aug/2023 00:17:32] "POST /api/login HTTP/1.1" 200 -

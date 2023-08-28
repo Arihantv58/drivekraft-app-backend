@@ -1,7 +1,7 @@
-from user.userDao import addUser,getUserIdByContact
+from user.userDao import addUser,getUserByContact
 
 def createUser(contactNumber):
     return addUser(contactNumber)
 
-def UserIdByContact(contactNumber):
-    return getUserIdByContact(contactNumber)
+def UserByContact(contactNumber):
+    return getUserByContact(contactNumber)

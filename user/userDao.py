@@ -1,6 +1,7 @@
 from db import connect,disconnect
 from configuration.currentTime import getCurrentTimeInIst
 import logging
+from user.user import user
 
 def addUser(contactNumber):
     now=getCurrentTimeInIst()
@@ -13,13 +14,13 @@ def addUser(contactNumber):
     logging.info(f"user with contact number {contactNumber} created")
     return "user is created"
 
-def getUserIdByContact(contactNumber):
+def getUserByContact(contactNumber):
     obj = connect()
     mycursor = obj.cursor(buffered=True)
-    query = f"select id from user where contact='{contactNumber}'"
+    query = f"select id,name, emailId,contact,totalSessions from user where contact='{contactNumber}'"
     mycursor.execute(query)
     data = mycursor.fetchone()
 
     if data == None:
         return None
-    return data[0]
+    return user(data[0],data[1],data[2],data[3],data[4])
