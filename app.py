@@ -1,7 +1,9 @@
 from flask import Flask
-from configuration import logfileConfigs
-from otp import otpService 
 import logging
+import configuration.logfileConfigs as logfileConfigs
+import otp.otpService as otpService
+import user.userService as userService
+
 
 
 
@@ -23,6 +25,12 @@ def sendOtp():
 @app.route("/api/login",methods=['POST'])
 def generateToken():
     return otpService.generateTokenInternally()
+
+
+@app.route("/api/user/firebase", methods =['POST'])
+def getUSerForFirebase():
+    return userService.firebaseUser()
+
 
 app.run(debug=True)
 

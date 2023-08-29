@@ -37,3 +37,15 @@
 2023-08-29 00:17:32,358 INFO root Thread-3 (process_request_thread) : 955937
 2023-08-29 00:17:32,392 INFO root Thread-3 (process_request_thread) : token updated for user with contact number  :  918284990439
 2023-08-29 00:17:32,392 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [29/Aug/2023 00:17:32] "POST /api/login HTTP/1.1" 200 -
+2023-08-29 01:40:13,565 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-29 01:40:13,566 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-29 01:40:13,570 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-29 01:40:14,144 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-29 01:40:14,152 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-29 01:40:59,328 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [29/Aug/2023 01:40:59] "[35m[1mPOST /api/user/firebase HTTP/1.1[0m" 500 -
+2023-08-29 01:42:27,125 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\app.py', reloading
+2023-08-29 01:42:27,259 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-29 01:42:28,535 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-29 01:42:28,543 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-29 01:42:30,236 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [29/Aug/2023 01:42:30] "POST /api/user/firebase HTTP/1.1" 200 -
