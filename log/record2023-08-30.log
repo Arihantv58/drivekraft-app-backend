@@ -1,0 +1,122 @@
+2023-08-30 01:05:26,136 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:05:26,136 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:05:26,136 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:05:26,995 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:05:27,011 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:06:19,978 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\app.py', reloading
+2023-08-30 01:06:20,086 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:11:52,313 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:11:52,313 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:11:52,316 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:11:53,079 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:11:53,083 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:19:57,493 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:19:57,493 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:19:57,493 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:19:58,259 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:19:58,264 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:20:33,103 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:20:33] "[35m[1mPOST /api/login-send-otp HTTP/1.1[0m" 500 -
+2023-08-30 01:21:45,141 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\otp\\otpService.py', reloading
+2023-08-30 01:21:45,226 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:21:46,178 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:21:46,183 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:21:56,402 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\otp\\otpService.py', reloading
+2023-08-30 01:21:56,494 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:21:57,300 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:21:57,301 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:21:59,381 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\otp\\otpService.py', reloading
+2023-08-30 01:21:59,463 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:22:00,335 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:22:00,343 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:22:30,958 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:22:30,958 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:22:30,961 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:22:31,855 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:22:31,861 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:22:33,906 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-30 01:22:35,284 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-30 01:22:35,289 INFO root Thread-2 (process_request_thread) : Template Send to 918284990439
+2023-08-30 01:22:35,290 INFO root Thread-2 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5Agn-OtbMyB8x71o"}
+2023-08-30 01:22:35,290 INFO root Thread-2 (process_request_thread) : OTP :  692836 send to user
+2023-08-30 01:22:35,489 INFO root Thread-2 (process_request_thread) : user with contact number 918284990439 created
+2023-08-30 01:22:35,508 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:22:35] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-30 01:23:25,042 DEBUG urllib3.connectionpool Thread-3 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-30 01:23:26,222 DEBUG urllib3.connectionpool Thread-3 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-30 01:23:26,226 INFO root Thread-3 (process_request_thread) : Template Send to 918284990439
+2023-08-30 01:23:26,226 INFO root Thread-3 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5Agm01EQtNB3OL1g"}
+2023-08-30 01:23:26,226 INFO root Thread-3 (process_request_thread) : OTP :  854620 send to user
+2023-08-30 01:23:26,252 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:23:26] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-30 01:23:42,129 DEBUG urllib3.connectionpool Thread-4 (process_request_thread) : Starting new HTTPS connection (1): api.chat-api.com:443
+2023-08-30 01:23:43,234 DEBUG urllib3.connectionpool Thread-4 (process_request_thread) : https://api.chat-api.com:443 "POST /instance294124/sendTemplate?token=bfllgpii7xqb42zq HTTP/1.1" 200 None
+2023-08-30 01:23:43,245 INFO root Thread-4 (process_request_thread) : Template Send to 918284990439
+2023-08-30 01:23:43,245 INFO root Thread-4 (process_request_thread) : API resposne : {"sent":true,"message":"Sent to 918284990439@c.us","description":"Message has been sent to the provider","id":"gBEGkYKEmQQ5AgkQWPOkFEBX8dQ"}
+2023-08-30 01:23:43,245 INFO root Thread-4 (process_request_thread) : OTP :  626365 send to user
+2023-08-30 01:23:43,268 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:23:43] "POST /api/login-send-otp HTTP/1.1" 200 -
+2023-08-30 01:24:13,964 INFO root Thread-5 (process_request_thread) : 626365
+2023-08-30 01:24:13,964 INFO root Thread-5 (process_request_thread) : 626365
+2023-08-30 01:24:13,979 INFO root Thread-5 (process_request_thread) : token updated for user with contact number  :  918284990439
+2023-08-30 01:24:13,979 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:24:13] "POST /api/login HTTP/1.1" 200 -
+2023-08-30 01:25:01,553 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:25:01] "[35m[1mPOST /api/user/firebase HTTP/1.1[0m" 500 -
+2023-08-30 01:25:59,359 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:25:59] "[35m[1mPOST /api/user/firebase HTTP/1.1[0m" 500 -
+2023-08-30 01:26:10,998 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:26:10,998 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:26:11,002 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:26:12,928 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:26:12,938 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:26:30,361 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:26:30] "[35m[1mPOST /api/user/firebase HTTP/1.1[0m" 500 -
+2023-08-30 01:27:00,354 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:27:00,355 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:27:00,355 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:27:02,751 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:27:02,767 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:27:44,018 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:27:44,018 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:27:44,021 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:27:44,926 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:27:44,931 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:27:49,090 INFO root Thread-2 (process_request_thread) : user with user id 1 updated
+2023-08-30 01:27:49,151 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:27:49] "[35m[1mPOST /api/user/firebase HTTP/1.1[0m" 500 -
+2023-08-30 01:28:25,026 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:28:25,029 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:28:25,036 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:28:27,471 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:28:27,481 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:28:33,585 INFO root Thread-6 (process_request_thread) : user with user id 1 updated
+2023-08-30 01:29:42,135 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:29:42,136 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:29:42,138 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:29:42,959 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:29:42,965 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:29:49,699 INFO root Thread-2 (process_request_thread) : user with user id 1 updated
+2023-08-30 01:29:49,722 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:29:49] "[35m[1mPOST /api/user/firebase HTTP/1.1[0m" 500 -
+2023-08-30 01:30:01,537 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:30:01,543 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:30:01,546 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:30:03,690 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:30:03,699 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:30:07,771 INFO root Thread-6 (process_request_thread) : user with user id 1 updated
+2023-08-30 01:34:29,633 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:34:29,633 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:34:29,637 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:34:30,604 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:34:30,609 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:34:33,130 INFO root Thread-2 (process_request_thread) : user with user id 1 updated
+2023-08-30 01:34:33,138 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 01:34:33] "POST /api/user/firebase HTTP/1.1" 200 -
+2023-08-30 01:34:55,700 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 01:34:55,700 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 01:34:55,711 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 01:34:57,924 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 01:34:57,929 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 01:35:16,259 INFO root Thread-6 (process_request_thread) : user with user id 1 updated

@@ -1,10 +1,11 @@
 from db import connect,disconnect
-from configuration.currentTime import getCurrentTimeInIst
-from otp.otp import otp
+import  configuration.currentTime as currentTime
+import  otp.otp as otp
+import otp.token as token
 from datetime import timedelta
 
 def addOtp(userId, Otp):
-    now=getCurrentTimeInIst()
+    now=currentTime.getCurrentTimeInIst()
     obj=connect()
     mycursor = obj.cursor(buffered=True)
     sql= f"Insert into otp(userId,otpvalue,created,updated) values('{userId}','{Otp}','{now}','{now}')"
@@ -22,11 +23,11 @@ def getLastOtpByUserId(userId):
 
     if data == None:
         return None
-    return otp(data[0],data[1],data[2],data[3],data[4])
+    return otp.otp(data[0],data[1],data[2],data[3],data[4])
 
 
 def storeToken(tokenValue,userId):
-    now=getCurrentTimeInIst()
+    now=currentTime.getCurrentTimeInIst()
     expiryDate = now + timedelta(days=30)
     obj=connect()
     mycursor = obj.cursor(buffered=True)
@@ -35,3 +36,16 @@ def storeToken(tokenValue,userId):
     obj.commit()
     disconnect(obj,mycursor)
     return "value updated in db"
+
+
+def getTokenFromValueInternally(tokenValue):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    query = f"select id,userId,tokenvalue, created,expireAt from token where tokenvalue='{tokenValue}' order by id desc limit 1"
+    mycursor.execute(query)
+    data = mycursor.fetchone()
+
+    if data == None:
+        return None
+    return token.token(data[0], data[1], data[2], data[3], data[4])
+
