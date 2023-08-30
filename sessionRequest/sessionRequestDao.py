@@ -26,3 +26,13 @@ def getLastRequestByUserId(userId):
         return None
     return sessionRequest.sessionRequest(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
 
+def cancelSessionRequestBySessionId(sessionRequestId):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    sql =f"Update sessionRequest set is_cancelled ='1' , updated_at =now() where id ='{sessionRequestId}'"
+    mycursor.execute(sql)
+    obj.commit()
+    disconnect(obj, mycursor)
+
+    logging.info(f"session with id  {sessionRequestId} has been cancelled")
+    return "session has been cancelled"
