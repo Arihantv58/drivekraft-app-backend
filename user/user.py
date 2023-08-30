@@ -1,7 +1,8 @@
 class user:
-  def __init__(self,id,name, emailId,contact,totalSessions,firebase_id,firebase_name,firebase_email,firebase_password,credits,is_online,is_busy):
+  def __init__(self,id,name, username,emailId,contact,totalSessions,firebase_id,firebase_name,firebase_email,firebase_password,credits,is_online,is_busy):
     self.id = id
     self.name = name
+    self.username = username
     self.emailId = emailId
     self.contact = contact
     self.totalSessions = totalSessions
