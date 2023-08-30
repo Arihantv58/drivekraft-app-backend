@@ -52,3 +52,15 @@ def updateUserFirebaseData(userId,responseObj):
     return "user is updated"
 
 
+def getUserByUserName(username):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    query = f"select id from user where username='{username}'"
+    mycursor.execute(query)
+    data = mycursor.fetchone()
+
+    if data == None:
+        return None
+    return data[0]
+
+

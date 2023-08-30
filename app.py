@@ -31,6 +31,9 @@ def generateToken():
 def getUSerForFirebase():
     return userService.firebaseUser()
 
+@app.route("/api/username/check", methods =['POST'])
+def checkUserNameIfExists():
+    return userService.checkUsername()
 
 app.run(debug=True)
 

@@ -5,6 +5,7 @@ create database drivekraft_backend;
 CREATE TABLE user(
         id INT PRIMARY KEY AUTO_INCREMENT,
         name Char(30),
+        username CHAR(50),
         emailId CHAR(50),
         contact CHAR(20) NOT NULL,
         totalSessions int DEFAULT '0',
