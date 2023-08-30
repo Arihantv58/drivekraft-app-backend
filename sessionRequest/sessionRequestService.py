@@ -1,6 +1,6 @@
 import sessionRequest.sessionRequestDao as sessionRequestDao
 import json
-from flask import request
+from flask import request,jsonify
 import user.userService as userService
 import otp.otpService as otpService
 def sendSessionRequest():
@@ -10,5 +10,10 @@ def sendSessionRequest():
     tokenValue = userService.getTokenFromRequest()
     token = otpService.getTokenFromTokenValue(tokenValue)
 
+    sessionRequestDao.createRequest(listnersId,token.userId)
 
-    return sessionRequestDao.createRequest(listnersId,token.userId)
+    sessionRequest=sessionRequestDao.getLastRequestByUserId(token.userId)
+
+    return jsonify({
+        "data": json.dumps(sessionRequest.__dict__)
+    })

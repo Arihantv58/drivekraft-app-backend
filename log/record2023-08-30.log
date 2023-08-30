@@ -294,3 +294,49 @@
 2023-08-30 23:10:51,746 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
 2023-08-30 23:10:55,176 INFO root Thread-2 (process_request_thread) : request created with useId : 3 and listnerId : 220
 2023-08-30 23:10:55,176 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 23:10:55] "POST /api/session/book/request HTTP/1.1" 200 -
+2023-08-30 23:23:15,801 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 23:23:15,801 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 23:23:15,804 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 23:23:16,651 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 23:23:16,656 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 23:23:25,222 INFO root Thread-2 (process_request_thread) : request created with useId : 3 and listnerId : 220
+2023-08-30 23:23:25,243 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 23:23:25] "[35m[1mPOST /api/session/book/request HTTP/1.1[0m" 500 -
+2023-08-30 23:23:52,178 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 23:23:52,179 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 23:23:52,183 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 23:23:54,286 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 23:23:54,298 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 23:23:58,930 INFO root Thread-6 (process_request_thread) : request created with useId : 3 and listnerId : 220
+2023-08-30 23:25:23,000 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 23:25:23,001 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 23:25:23,004 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 23:25:23,944 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 23:25:23,949 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 23:25:25,731 INFO root Thread-2 (process_request_thread) : request created with useId : 3 and listnerId : 220
+2023-08-30 23:25:25,793 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 23:25:25] "[35m[1mPOST /api/session/book/request HTTP/1.1[0m" 500 -
+2023-08-30 23:25:41,320 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 23:25:41,320 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 23:25:41,324 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 23:25:42,137 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 23:25:42,141 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 23:25:45,501 INFO root Thread-2 (process_request_thread) : request created with useId : 3 and listnerId : 220
+2023-08-30 23:25:45,521 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 23:25:45] "[35m[1mPOST /api/session/book/request HTTP/1.1[0m" 500 -
+2023-08-30 23:26:31,461 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 23:26:31,466 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 23:26:31,472 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 23:26:33,855 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 23:26:33,868 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 23:26:36,969 INFO root Thread-6 (process_request_thread) : request created with useId : 3 and listnerId : 220
+2023-08-30 23:29:18,479 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-30 23:29:18,479 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-30 23:29:18,482 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-30 23:29:19,373 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-30 23:29:19,380 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-30 23:29:20,977 INFO root Thread-2 (process_request_thread) : request created with useId : 3 and listnerId : 220
+2023-08-30 23:29:20,986 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [30/Aug/2023 23:29:20] "POST /api/session/book/request HTTP/1.1" 200 -

@@ -47,6 +47,7 @@ CREATE TABLE sessionRequest(
         id INT PRIMARY KEY AUTO_INCREMENT,
         listener_id CHAR(20),
         customer_id CHAR(20),
+        is_cancelled  bool  DEFAULT true,
         expiry_at DATE,
         updated_at DATE,
         created_at DATE
