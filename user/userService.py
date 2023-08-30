@@ -24,6 +24,16 @@ def firebaseUser():
         "user" : json.dumps(user.__dict__)
     })
 
+def getUser():
+    tokenValue = getTokenFromRequest()
+    token = otpService.getTokenFromTokenValue(tokenValue)
+
+    user = userDao.getUserById(token.userId)
+
+    return jsonify({
+         "user" : json.dumps(user.__dict__)
+    })
+
 
 
 def getTokenFromRequest():
