@@ -29,3 +29,13 @@ def cancelSessionRequest():
         'status' : 'Success',
         'message': "Session request cancelled.",
     })
+
+def verifySessionRequest():
+    obj = json.loads(request.data)
+    sessionRequestId = obj['session_request_id']
+
+    sessionRequest=sessionRequestDao.verifySessionRequestBySessionId(sessionRequestId)
+
+    return ({
+        'session': str(sessionRequest.__dict__)
+    })

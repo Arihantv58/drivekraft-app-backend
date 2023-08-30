@@ -50,6 +50,10 @@ def bookRequest():
 def cancelSessionRequest():
         return sessionRequestService.cancelSessionRequest()
 
+@app.route("/api/session/book/request/verify", methods =['POST'])
+def verifySessionRequest():
+        return sessionRequestService.verifySessionRequest()
+
 
 app.run(debug=True)
 
