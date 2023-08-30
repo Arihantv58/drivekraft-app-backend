@@ -1,0 +1,20 @@
+2023-08-31 00:38:58,381 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-31 00:38:58,381 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-31 00:38:58,384 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-31 00:38:59,157 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-31 00:38:59,171 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-31 00:39:01,805 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [31/Aug/2023 00:39:01] "[35m[1mPOST /api/session/book/request/cancel HTTP/1.1[0m" 500 -
+2023-08-31 00:40:10,445 INFO werkzeug MainThread :  * Detected change in 'C:\\Users\\Dipesh\\Desktop\\Codebase\\drivekraft-app-backend\\drivekraft-app-backend\\sessionRequest\\sessionRequestDao.py', reloading
+2023-08-31 00:40:10,550 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-31 00:40:11,375 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-31 00:40:16,661 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-31 00:40:16,661 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-31 00:40:16,663 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-31 00:40:17,417 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-31 00:40:17,428 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-31 00:40:19,437 INFO root Thread-2 (process_request_thread) : session with id  1 has been cancelled
+2023-08-31 00:40:19,438 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [31/Aug/2023 00:40:19] "POST /api/session/book/request/cancel HTTP/1.1" 200 -
+2023-08-31 00:40:58,795 INFO root Thread-3 (process_request_thread) : session with id  1 has been cancelled
+2023-08-31 00:40:58,795 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [31/Aug/2023 00:40:58] "POST /api/session/book/request/cancel HTTP/1.1" 200 -

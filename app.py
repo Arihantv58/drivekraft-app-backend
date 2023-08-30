@@ -43,7 +43,13 @@ def checkUserNameIfExists():
 
 @app.route("/api/session/book/request", methods =['POST'])
 def bookRequest():
-    return sessionRequestService.sendSessionRequest()
+        return sessionRequestService.sendSessionRequest()
+
+
+@app.route("/api/session/book/request/cancel", methods =['POST'])
+def cancelSessionRequest():
+        return sessionRequestService.cancelSessionRequest()
+
 
 app.run(debug=True)
 
