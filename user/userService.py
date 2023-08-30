@@ -42,3 +42,16 @@ def getTokenFromRequest():
     token = bearer.split()[1]  # YourTokenHere
 
     return token
+
+def checkUsername():
+    obj = json.loads(request.data)
+    username = obj['username']
+    id = userDao.getUserByUserName(username)
+    if id ==None:
+        return jsonify({
+            "Message": "Invalid user",
+        })
+
+    return jsonify({
+        "Message": "User exist in our system",
+    })         
