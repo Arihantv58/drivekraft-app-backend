@@ -3,6 +3,7 @@ import logging
 import configuration.logfileConfigs as logfileConfigs
 import otp.otpService as otpService
 import user.userService as userService
+import sessionRequest.sessionRequestService as sessionRequestService
 
 
 
@@ -39,6 +40,10 @@ def getUSer():
 @app.route("/api/username/check", methods =['POST'])
 def checkUserNameIfExists():
     return userService.checkUsername()
+
+@app.route("/api/session/book/request", methods =['POST'])
+def bookRequest():
+    return sessionRequestService.sendSessionRequest()
 
 app.run(debug=True)
 
