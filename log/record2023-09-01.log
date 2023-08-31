@@ -1,0 +1,20 @@
+2023-09-01 00:05:04,731 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-09-01 00:05:04,732 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-09-01 00:05:04,740 INFO werkzeug MainThread :  * Restarting with stat
+2023-09-01 00:05:07,073 WARNING werkzeug MainThread :  * Debugger is active!
+2023-09-01 00:05:07,084 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-09-01 00:05:17,533 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [01/Sep/2023 00:05:17] "[35m[1mGET /api/role HTTP/1.1[0m" 500 -
+2023-09-01 00:07:19,405 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-09-01 00:07:19,405 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-09-01 00:07:19,415 INFO werkzeug MainThread :  * Restarting with stat
+2023-09-01 00:07:21,611 WARNING werkzeug MainThread :  * Debugger is active!
+2023-09-01 00:07:21,623 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-09-01 00:07:55,327 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-09-01 00:07:55,327 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-09-01 00:07:55,330 INFO werkzeug MainThread :  * Restarting with stat
+2023-09-01 00:07:56,261 WARNING werkzeug MainThread :  * Debugger is active!
+2023-09-01 00:07:56,266 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-09-01 00:07:57,233 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Sep/2023 00:07:57] "GET /api/role HTTP/1.1" 200 -

@@ -1,8 +1,10 @@
-from flask import Flask
+from flask import Flask,jsonify
 import logging
+import json
 import configuration.logfileConfigs as logfileConfigs
 import otp.otpService as otpService
 import user.userService as userService
+import role.roleService as roleService
 import sessionRequest.sessionRequestService as sessionRequestService
 
 
@@ -35,8 +37,12 @@ def getUSerForFirebase():
 
 @app.route("/api/user", methods =['GET'])
 def getUSer():
-    return userService.getUser()
-  
+    user=userService.getUser()
+    return jsonify({
+        "user": json.dumps(user.__dict__)
+    })
+
+
 @app.route("/api/username/check", methods =['POST'])
 def checkUserNameIfExists():
     return userService.checkUsername()
@@ -58,6 +64,13 @@ def verifySessionRequest():
 @app.route("/api/session/request/confirm", methods =['POST'])
 def confirmSessionRequestInternal():
         return sessionRequestService.confirmSessionRequest()
+
+
+@app.route("/api/role", methods =['GET'])
+def getRole():
+        return roleService.getUserRole()
+
+
 
 app.run(debug=True)
 

@@ -168,3 +168,16 @@
 2023-08-31 17:22:58,891 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [31/Aug/2023 17:22:58] "POST /api/session/book/request HTTP/1.1" 200 -
 2023-08-31 17:23:04,324 INFO root Thread-3 (process_request_thread) : session with id  1 has been confirmed
 2023-08-31 17:23:04,332 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [31/Aug/2023 17:23:04] "POST /api/session/request/confirm HTTP/1.1" 200 -
+2023-08-31 23:37:17,192 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-31 23:37:17,193 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-31 23:37:17,196 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-31 23:37:18,039 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-31 23:37:18,046 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613
+2023-08-31 23:38:17,092 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [31/Aug/2023 23:38:17] "[35m[1mGET /api/role HTTP/1.1[0m" 500 -
+2023-08-31 23:38:49,614 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-31 23:38:49,616 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-31 23:38:49,625 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-31 23:38:52,005 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-31 23:38:52,017 INFO werkzeug MainThread :  * Debugger PIN: 205-260-613

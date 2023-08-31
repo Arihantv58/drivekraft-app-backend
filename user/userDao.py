@@ -17,25 +17,25 @@ def addUser(contactNumber):
 def getUserByContact(contactNumber):
     obj = connect()
     mycursor = obj.cursor(buffered=True)
-    query = f"select id,name, emailId,contact,totalSessions,firebase_id,firebase_name,firebase_email,firebase_password,credits,is_online,is_busy from user where contact='{contactNumber}'"
+    query = f"select id,name, username ,emailId,contact,totalSessions,firebase_id,firebase_name,firebase_email,firebase_password,credits,role_id,is_online,is_busy from user where contact='{contactNumber}'"
     mycursor.execute(query)
     data = mycursor.fetchone()
 
     if data == None:
         return None
-    return user.user(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11])
+    return user.user(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13])
 
 
 def getUserById(userId):
     obj = connect()
     mycursor = obj.cursor(buffered=True)
-    query = f"select id,name,username, emailId,contact,totalSessions,firebase_id,firebase_name,firebase_email,firebase_password,credits,is_online,is_busy from user where id='{userId}'"
+    query = f"select id,name,username, emailId,contact,totalSessions,firebase_id,firebase_name,firebase_email,firebase_password,credits,role_id,is_online,is_busy from user where id='{userId}'"
     mycursor.execute(query)
     data = mycursor.fetchone()
 
     if data == None:
         return None
-    return user.user(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12])
+    return user.user(data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13])
 
 
 
