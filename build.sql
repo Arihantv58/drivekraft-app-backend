@@ -14,6 +14,7 @@ CREATE TABLE user(
         firebase_email CHAR(100) DEFAULT NULL,
         firebase_password CHAR(100) DEFAULT NULL,
         credits INT DEFAULT 50,
+        role_id INT DEFAULT 2,
         is_online INT DEFAULT 1,
         is_busy INT DEFAULT '0',
         created CHAR(50),
@@ -53,3 +54,17 @@ CREATE TABLE sessionRequest(
         updated_at DATETIME,
         created_at DATETIME
         );
+
+--- creating role table
+CREATE TABLE role(
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        name CHAR(20),
+        label CHAR(20),
+        created_at DATETIME,
+        updated_at DATETIME
+        );
+
+
+-- inserting into role ids needed to be mapped properly
+insert ignore into role values(2,'psychologist','Psychologist', now(),now())
+insert ignore into role values(3,'customer','Customer', now(),now())

@@ -29,10 +29,8 @@ def getUser():
     token = otpService.getTokenFromTokenValue(tokenValue)
 
     user = userDao.getUserById(token.userId)
+    return user
 
-    return jsonify({
-         "user" : json.dumps(user.__dict__)
-    })
 
 
 
@@ -55,3 +53,15 @@ def checkUsername():
     return jsonify({
         "Message": "User exist in our system",
     })         
+
+
+def getUserRoleID():
+    tokenValue = getTokenFromRequest()
+    token = otpService.getTokenFromTokenValue(tokenValue)
+
+    user = userDao.getUserById(token.userId)
+    return user.role_id
+
+
+
+
