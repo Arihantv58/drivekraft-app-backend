@@ -29,3 +29,33 @@ def cancelSessionRequest():
         'status' : 'Success',
         'message': "Session request cancelled.",
     })
+
+def verifySessionRequest():
+    obj = json.loads(request.data)
+    sessionRequestId = obj['session_request_id']
+
+    sessionRequest=sessionRequestDao.verifySessionRequestBySessionId(sessionRequestId)
+
+    return ({
+        'session': str(sessionRequest.__dict__)
+    })
+
+def confirmSessionRequest():
+    obj = json.loads(request.data)
+    sessionRequestId = obj['session_request_id']
+
+    if sessionRequestDao.isExpiredOrCancelled(sessionRequestId)== True:
+        return ({
+            "status": "Error",
+            "message": "Session request either expired or cancelled."
+        })
+    else:
+        sessionRequestDao.confirmSessionById(sessionRequestId)
+        sessionRequest = sessionRequestDao.verifySessionRequestBySessionId(sessionRequestId)
+
+        return ({
+            "status": "Success",
+            "message": "Session request successfully confirmed.",
+            'session': str(sessionRequest.__dict__)
+        })
+

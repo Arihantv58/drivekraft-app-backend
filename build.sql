@@ -48,7 +48,8 @@ CREATE TABLE sessionRequest(
         listener_id CHAR(20),
         customer_id CHAR(20),
         is_cancelled  bool  DEFAULT false,
-        expiry_at DATE,
-        updated_at DATE,
-        created_at DATE
-        )
+        status  bool  DEFAULT false,
+        expiry_at DATETIME,
+        updated_at DATETIME,
+        created_at DATETIME
+        );
