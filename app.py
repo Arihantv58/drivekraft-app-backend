@@ -55,6 +55,10 @@ def verifySessionRequest():
         return sessionRequestService.verifySessionRequest()
 
 
+@app.route("/api/session/request/confirm", methods =['POST'])
+def confirmSessionRequestInternal():
+        return sessionRequestService.confirmSessionRequest()
+
 app.run(debug=True)
 
 
