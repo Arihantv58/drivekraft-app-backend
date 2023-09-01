@@ -7,9 +7,7 @@ import user.userService as userService
 import role.roleService as roleService
 import psychologist.psychologistService as psychologistService
 import sessionRequest.sessionRequestService as sessionRequestService
-
-
-
+import payment.paymentService as paymentService
 
 
 app = Flask(__name__)
@@ -78,6 +76,15 @@ def getPsychologist():
         return ({
             "data": str(data)
         })
+
+@app.route("/api/order/create", methods =['POST'])
+def createRazorpayOrder():
+    response= paymentService.createRazorpayOrder()
+    return ({
+        "order_id": response['id'],
+        "currency" : "INR" ,
+        "amount" : response['amount']/100
+    })
 
 app.run(debug=True)
 
