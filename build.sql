@@ -68,3 +68,33 @@ CREATE TABLE role(
 -- inserting into role ids needed to be mapped properly
 insert ignore into role values(2,'psychologist','Psychologist', now(),now())
 insert ignore into role values(3,'customer','Customer', now(),now())
+
+
+-- creating psychologist table
+Create Table psychologist(
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        name CHAR(20),
+        profile_image CHAR(20),
+        is_busy bool  DEFAULT false,
+        firebase_id CHAR(100) DEFAULT NULL,
+        firebase_name CHAR(100) DEFAULT NULL,
+        firebase_email CHAR(100) DEFAULT NULL,
+        firebase_password CHAR(100) DEFAULT NULL,
+        uuid CHAR(100),
+        user_id CHAR(100),
+        description CHAR(1000),
+        session_count INT ,
+        rating FLOAT ,
+        yrs_of_exp INT,
+        education CHAR(50),
+        short_desc CHAR(200),
+        status bool  DEFAULT true,
+        order INT,
+        updated_at DATETIME,
+        created_at DATETIME,
+        gender CHAR(20),
+        age CHAR(20),
+        interests CHAR(50),
+        languages CHAR(40),
+        online bool  DEFAULT true
+    );
