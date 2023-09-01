@@ -5,6 +5,7 @@ import configuration.logfileConfigs as logfileConfigs
 import otp.otpService as otpService
 import user.userService as userService
 import role.roleService as roleService
+import psychologist.psychologistService as psychologistService
 import sessionRequest.sessionRequestService as sessionRequestService
 
 
@@ -71,6 +72,12 @@ def getRole():
         return roleService.getUserRole()
 
 
+@app.route("/api/psychologists", methods =['GET'])
+def getPsychologist():
+        data= psychologistService.getPsychologistList()
+        return ({
+            "data": str(data)
+        })
 
 app.run(debug=True)
 
