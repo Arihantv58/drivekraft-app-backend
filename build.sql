@@ -98,3 +98,18 @@ Create Table psychologist(
         languages CHAR(40),
         online bool  DEFAULT true
     );
+
+
+
+--------- creating table paymentOrder
+CREATE TABLE paymentOrder(
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        order_id CHAR(100),
+        payment_id CHAR(100),
+        signature CHAR(100),
+        amount CHAR(6),
+        userId INT,
+        paymentGateway CHAR(30),
+        created_at DATETIME,
+        updated_at DATETIME
+        );
