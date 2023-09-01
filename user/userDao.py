@@ -64,3 +64,13 @@ def getUserByUserName(username):
     return data[0]
 
 
+def updateUserBalance(id,bal):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    sql = f"Update user set credits ='{bal}',updated_at =now() where id ='{id}'"
+    mycursor.execute(sql)
+    obj.commit()
+    disconnect(obj, mycursor)
+
+    logging.info(f"Balance updated to  {bal} for user {id}")
+    return

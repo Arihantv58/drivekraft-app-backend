@@ -113,3 +113,17 @@ CREATE TABLE paymentOrder(
         created_at DATETIME,
         updated_at DATETIME
         );
+
+
+-- creating table transaction
+CREATE TABLE transaction(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    transaction_id CHAR(100),
+    userId INT,
+    psychologist_id INT,
+    session_request_id INT,
+    seconds_chatted INT,
+    amount_deducted INT,
+    created_at DATETIME,
+    updated_at DATETIME
+);
