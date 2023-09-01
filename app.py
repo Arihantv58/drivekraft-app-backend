@@ -86,6 +86,14 @@ def createRazorpayOrder():
         "amount" : response['amount']/100
     })
 
+
+
+
+@app.route("/api/order/placed", methods =['POST'])
+def confirmRazorpayOrder():
+    paymentService.placeRazorpayOrder()
+
+
 app.run(debug=True)
 
 
