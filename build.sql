@@ -5,7 +5,7 @@ create database drivekraft_backend;
 CREATE TABLE user(
         id INT PRIMARY KEY AUTO_INCREMENT,
         name Char(30),
-        username CHAR(50) DEFAULT NUL,
+        username CHAR(50) DEFAULT NULL,
         emailId CHAR(50),
         contact CHAR(20) NOT NULL,
         totalSessions int DEFAULT '0',
@@ -55,7 +55,7 @@ CREATE TABLE sessionRequest(
         created_at DATETIME
         );
 
---- creating role table
+-- creating role table
 CREATE TABLE role(
         id INT PRIMARY KEY AUTO_INCREMENT,
         name CHAR(20),
@@ -82,14 +82,14 @@ Create Table psychologist(
         firebase_password CHAR(100) DEFAULT NULL,
         uuid CHAR(100),
         user_id CHAR(100),
-        description CHAR(1000),
+        description LONGTEXT,
         session_count INT ,
         rating FLOAT ,
         yrs_of_exp INT,
         education CHAR(50),
         short_desc CHAR(200),
         status bool  DEFAULT true,
-        order INT,
+        order_ INT,
         updated_at DATETIME,
         created_at DATETIME,
         gender CHAR(20),
@@ -101,7 +101,7 @@ Create Table psychologist(
 
 
 
---------- creating table paymentOrder
+-- creating table paymentOrder
 CREATE TABLE paymentOrder(
         id INT PRIMARY KEY AUTO_INCREMENT,
         order_id CHAR(100),
