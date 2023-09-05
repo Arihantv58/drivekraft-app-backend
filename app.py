@@ -1,4 +1,4 @@
-from flask import Flask,jsonify
+from flask import Flask,jsonify,request
 import logging
 import json
 import configuration.logfileConfigs as logfileConfigs
@@ -11,7 +11,7 @@ import payment.paymentService as paymentService
 
 
 app = Flask(__name__)
-logfileConfigs.logFileCongig()
+#logfileConfigs.logFileCongig()
 
 
 @app.route("/")
@@ -101,7 +101,6 @@ def appVersion():
 @app.route("/api/order/placed", methods =['POST'])
 def confirmRazorpayOrder():
     paymentService.placeRazorpayOrder()
-
 
 app.run(debug=True)
 

@@ -42,8 +42,7 @@ def getTokenFromRequest():
     return token
 
 def checkUsername():
-    obj = json.loads(request.data)
-    username = request.args.get('username')
+    username = request.form.get('username')
     id = userDao.getUserByUserName(username)
     if id ==None:
         return jsonify({
