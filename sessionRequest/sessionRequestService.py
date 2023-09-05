@@ -7,7 +7,7 @@ import sessionRequest.sessionRequestDao as sessionRequestDao
 
 def sendSessionRequest():
     obj = json.loads(request.data)
-    listnersId = obj['listener_id']
+    listnersId =  request.args.get('listener_id')
 
     tokenValue = userService.getTokenFromRequest()
     token = otpService.getTokenFromTokenValue(tokenValue)
@@ -22,7 +22,7 @@ def sendSessionRequest():
 
 def cancelSessionRequest():
     obj = json.loads(request.data)
-    sessionRequestId = obj['session_request_id']
+    sessionRequestId = request.args.get('session_request_id')
     sessionRequestDao.cancelSessionRequestBySessionId(sessionRequestId)
 
     return ({
@@ -32,7 +32,7 @@ def cancelSessionRequest():
 
 def verifySessionRequest():
     obj = json.loads(request.data)
-    sessionRequestId = obj['session_request_id']
+    sessionRequestId = request.args.get('session_request_id')
 
     sessionRequest=sessionRequestDao.verifySessionRequestBySessionId(sessionRequestId)
 
@@ -42,7 +42,7 @@ def verifySessionRequest():
 
 def confirmSessionRequest():
     obj = json.loads(request.data)
-    sessionRequestId = obj['session_request_id']
+    sessionRequestId = request.args.get('session_request_id')
 
     if sessionRequestDao.isExpiredOrCancelled(sessionRequestId)== True:
         return ({

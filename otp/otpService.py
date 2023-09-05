@@ -15,8 +15,9 @@ import otp.otpDao as otpDao
 
 
 def sendOtpInternally():
+    logging.info(f"request body  :  {request.data}")
     obj = json.loads(request.data)
-    contactNumber = obj['mobile']
+    contactNumber = request.args.get('mobile')
 
     if  contactValidation.isValidContact(contactNumber)== False:
          return jsonify({
@@ -42,8 +43,8 @@ def sendOtpInternally():
 
 def generateTokenInternally():
     obj = json.loads(request.data)
-    contactNumber = obj['mobile']
-    otpVal = obj['otp']
+    contactNumber = request.args.get('mobile')
+    otpVal = request.args.get('otp')
 
     user = userService.UserByContact(contactNumber)
     otp = otpDao.getLastOtpByUserId(user.id)
