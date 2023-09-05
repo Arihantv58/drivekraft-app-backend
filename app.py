@@ -87,6 +87,15 @@ def createRazorpayOrder():
     })
 
 
+@app.route("/api/app/ver", methods =['GET'])
+def appVersion():
+    return ({
+         "id": 1,
+         "key": "version",
+         "value": "102.0",
+         "created_at": "2023-08-02T11:40:20.000000Z",
+         "updated_at": "2023-08-02T11:40:20.000000Z"
+    })
 
 
 @app.route("/api/order/placed", methods =['POST'])
