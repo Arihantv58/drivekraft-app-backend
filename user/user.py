@@ -3,7 +3,7 @@ class user:
     self.id = id
     self.name = name
     self.username = username
-    self.emailId = emailId
+    self.email = emailId
     self.contact = contact
     self.totalSessions = totalSessions
     self.firebase_id=firebase_id

@@ -2,6 +2,7 @@ from flask import request,jsonify
 import user.userDao as userDao
 import json
 import otp.otpService as otpService
+import psychologist.psychologistService as psychologistService
 
 def createUser(contactNumber):
     return userDao.addUser(contactNumber)
@@ -78,3 +79,33 @@ def addUserCredit(amt):
     user = getUser()
     userDao.updateUserBalance(user.id,amt+ user.credits)
     return
+
+
+def setUserOnline():
+    user = getUser()
+    status = request.form.get('online_status')
+    userDao.updateUserAvailStatus(user.id, status)
+
+    return jsonify({
+        "msg": "Successfully Updated.",
+        'status' : 'Success',
+        "user": (getUser().__dict__)
+    })
+
+def checkUserBusy():
+    psyId = request.form.get('psychologist_id')
+    psychologist = psychologistService.getPsychologistById(psyId)
+    user= userDao.getUserById(psychologist.user_id)
+
+    return jsonify({
+        "is_busy": user.is_busy,
+        'is_online': user.is_online
+
+    })
+
+def checkUserBalance():
+    user = getUser()
+
+    return jsonify({
+        "credits": user.credits
+    })
