@@ -14,7 +14,7 @@ CREATE TABLE user(
         firebase_email CHAR(100) DEFAULT NULL,
         firebase_password CHAR(100) DEFAULT NULL,
         credits INT DEFAULT 50,
-        role_id INT DEFAULT 2,
+        role_id INT DEFAULT 3,
         is_online INT DEFAULT 1,
         is_busy INT DEFAULT '0',
         created CHAR(50),
@@ -127,3 +127,6 @@ CREATE TABLE transaction(
     created_at DATETIME,
     updated_at DATETIME
 );
+
+
+ALTER TABLE psychologist MODIFY profile_image char(50);

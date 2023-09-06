@@ -1,3 +1,4 @@
+from flask import request
 from db import connect,disconnect
 import logging
 import  configuration.currentTime as currentTime
@@ -40,11 +41,15 @@ def getUserById(userId):
 
 
 
-def updateUserFirebaseData(userId,responseObj):
+def updateUserFirebaseData(userId):
     now = currentTime.getCurrentTimeInIst()
+    firebase_id = request.form.get('firebase_id')
+    firebase_name = request.form.get('firebase_name')
+    firebase_email = request.form.get('firebase_email')
+    firebase_password = request.form.get('mobile')
     obj = connect()
     mycursor = obj.cursor(buffered=True)
-    sql = f"Update user set  firebase_id ='{responseObj['firebase_id']}' , firebase_name ='{responseObj['firebase_name']}' , firebase_email ='{responseObj['firebase_email']}' , firebase_password = '{responseObj['firebase_password']}' , updated ='{now}' where id ='{userId}'"
+    sql = f"Update user set  firebase_id ='{firebase_id}' , firebase_name ='{firebase_name}' , firebase_email ='{firebase_email}' , firebase_password = '{firebase_password}' , updated ='{now}' where id ='{userId}'"
     mycursor.execute(sql)
     obj.commit()
     disconnect(obj, mycursor)
