@@ -38,13 +38,18 @@ def getUSerForFirebase():
 def getUSer():
     user=userService.getUser()
     return jsonify({
-        "user": json.dumps(user.__dict__)
+        "user": (user.__dict__)
     })
 
 
 @app.route("/api/username/check", methods =['POST'])
 def checkUserNameIfExists():
     return userService.checkUsername()
+
+@app.route("/api/users/status/busy", methods =['POST'])
+def updateBusyStatus():
+    return userService.updateBusyStatus()
+
 
 @app.route("/api/session/book/request", methods =['POST'])
 def bookRequest():
@@ -99,8 +104,15 @@ def appVersion():
 
 
 @app.route("/api/order/placed", methods =['POST'])
-def confirmRazorpayOrder():
+def placeRazorpayOrder():
     paymentService.placeRazorpayOrder()
+
+@app.route("/api/order/confirm", methods =['POST'])
+def confirmRazorpayOrder():
+    paymentService.confirmRazorpayOrder()
+
+
+
 
 app.run(debug=True)
 

@@ -1,5 +1,5 @@
 import json
-from flask import request
+from flask import request,jsonify
 import requests
 import payment.paymentDao as paymentDao
 import user.userService as userService
@@ -65,3 +65,33 @@ def placeRazorpayOrder():
         "credits_availablility": availability,
         "credits_sufficient_for_five_minutes": sufficent_balance
     })
+
+def confirmRazorpayOrder():
+    payload = request.json
+    if 'razorpay_payment_id' in payload:
+        paymentDao.updatePamentOrder(payload['razorpay_order_id'],payload['razorpay_payment_id'],payload['razorpay_signature'],'razorpay')
+
+        url = f"https://api.razorpay.com/v1/orders/{payload['razorpay_order_id']}"
+
+        payload = {}
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic cnpwX2xpdmVfVFR2bFp1VDZDOVZZQ2Y6OXhVNVBhUnVFbktwVUJvQWh1OEtwRUhR'
+        }
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+
+        if response.status_code == 200:
+            responseDict = json.loads(response.text)
+            if responseDict['status'] == 'paid':
+               # paymentDao.updateOrderStatus(payload['razorpay_order_id'],True) will add filed in future and do this
+                userService.addUserCredit(responseDict['amount']/100)
+
+                return jsonify({'msg': 'Your payment id is ' + payload['razorpay_order_id'] + '.', 'status': 'success',
+                                'title': 'Session Booked.'})
+
+        else:
+             return jsonify({'msg': 'Payment Failed.', 'status': 'error', 'title': 'Error'})
+
+    else:
+        return jsonify({'msg': 'Session Booking Failed.', 'status': 'error', 'title': 'Error'})

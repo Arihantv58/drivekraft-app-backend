@@ -20,8 +20,20 @@ def firebaseUser():
     return jsonify({
         "msg": "Successfully Updated.",
         "status" :"Success",
-        "user" : json.dumps(user.__dict__)
+        "user" : (user.__dict__)
     })
+
+
+def updateBusyStatus():
+    user = getUser()
+    status = request.form.get('busy')
+    userDao.updateUsetStatus(user.id,status)
+
+    return jsonify({
+        "msg": "Successfully Updated",
+        "user": (getUser().__dict__)
+    })
+
 
 def getUser():
     print("before token")
@@ -31,7 +43,6 @@ def getUser():
 
     user = userDao.getUserById(token.userId)
     return user
-
 
 
 
@@ -63,5 +74,7 @@ def getUserRoleID():
     return user.role_id
 
 
-
-
+def addUserCredit(amt):
+    user = getUser()
+    userDao.updateUserBalance(user.id,amt+ user.credits)
+    return

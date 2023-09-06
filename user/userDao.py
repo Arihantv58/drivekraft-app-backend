@@ -72,10 +72,32 @@ def getUserByUserName(username):
 def updateUserBalance(id,bal):
     obj = connect()
     mycursor = obj.cursor(buffered=True)
-    sql = f"Update user set credits ='{bal}',updated_at =now() where id ='{id}'"
+    sql = f"Update user set credits ='{bal}',updated =now() where id ='{id}'"
     mycursor.execute(sql)
     obj.commit()
     disconnect(obj, mycursor)
 
     logging.info(f"Balance updated to  {bal} for user {id}")
+    return
+
+def updateUsetStatus(user_id,status):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    sql = f"Update user set is_busy ='{status}',updated =now() where id ='{user_id}'"
+    mycursor.execute(sql)
+    obj.commit()
+    disconnect(obj, mycursor)
+
+    logging.info(f"user status  updated to  {status} for user {user_id}")
+    return
+
+def updateOrderStatus(razorpay_order_id,status):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    sql = f"Update paymentorder set is_busy ='{status}',updated =now() where id ='{user_id}'"
+    mycursor.execute(sql)
+    obj.commit()
+    disconnect(obj, mycursor)
+
+    logging.info(f"user status  updated to  {status} for user {user_id}")
     return
