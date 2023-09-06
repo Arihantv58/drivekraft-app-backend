@@ -101,3 +101,15 @@ def updateOrderStatus(razorpay_order_id,status):
 
     logging.info(f"user status  updated to  {status} for user {user_id}")
     return
+
+
+def updateUserAvailStatus(user_id,status):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    sql = f"Update user set is_online ='{status}',updated =now() where id ='{user_id}'"
+    mycursor.execute(sql)
+    obj.commit()
+    disconnect(obj, mycursor)
+
+    logging.info(f"user status  updated to  {status} for user {user_id}")
+    return

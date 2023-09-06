@@ -78,3 +78,15 @@ def addUserCredit(amt):
     user = getUser()
     userDao.updateUserBalance(user.id,amt+ user.credits)
     return
+
+
+def setUserOnline():
+    user = getUser()
+    status = request.form.get('online_status')
+    userDao.updateUserAvailStatus(user.id, status)
+
+    return jsonify({
+        "msg": "Successfully Updated.",
+        'status' : 'Success',
+        "user": (getUser().__dict__)
+    })
