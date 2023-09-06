@@ -74,13 +74,13 @@ def getRole():
 def getPsychologist():
         data= psychologistService.getPsychologistList()
         return ({
-            "data": str(data)
+            "data": data
         })
 
 @app.route("/api/order/create", methods =['POST'])
 def createRazorpayOrder():
     response= paymentService.createRazorpayOrder()
-    return ({
+    return jsonify({
         "order_id": response['id'],
         "currency" : "INR" ,
         "amount" : response['amount']/100

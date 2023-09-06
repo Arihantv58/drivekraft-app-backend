@@ -10,11 +10,10 @@ def UserByContact(contactNumber):
     return userDao.getUserByContact(contactNumber)
 
 def firebaseUser():
-    obj = json.loads(request.data)
 
     tokenValue =getTokenFromRequest()
     token=otpService.getTokenFromTokenValue(tokenValue)
-    userDao.updateUserFirebaseData(token.userId,obj)
+    userDao.updateUserFirebaseData(token.userId)
 
     user = userDao.getUserById(token.userId)
 
@@ -25,7 +24,9 @@ def firebaseUser():
     })
 
 def getUser():
+    print("before token")
     tokenValue = getTokenFromRequest()
+    print("after token " , tokenValue )
     token = otpService.getTokenFromTokenValue(tokenValue)
 
     user = userDao.getUserById(token.userId)

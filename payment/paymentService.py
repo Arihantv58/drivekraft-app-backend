@@ -5,8 +5,7 @@ import payment.paymentDao as paymentDao
 import user.userService as userService
 import user.userDao as userDao
 def createRazorpayOrder():
-    obj = json.loads(request.data)
-    amount = obj['amount']
+    amount=request.form.get('amount')
 
     url = "https://api.razorpay.com/v1/orders"
 
@@ -32,7 +31,7 @@ def createRazorpayOrder():
 def placeRazorpayOrder():
     user= userService.getUser()
     obj = json.loads(request.data)
-    transId = obj['transaction_id']
+    transId = request.form.get('transaction_id')
 
     if user.credits<5 :
         return ({
@@ -42,11 +41,11 @@ def placeRazorpayOrder():
         })
 
     transactional = paymentDao.getTransactionaByTransId(transId)
-    seconds_chatted = obj['seconds_chatted']
+    seconds_chatted = request.form.get('seconds_chatted')
     cost = int((seconds_chatted + 60)/60) * 5;
 
     if transactional== None:
-         transId=paymentDao.createTranaction(user.id,obj['psychologist_id'],obj['session_request_id'],obj['seconds_chatted'],cost)
+         transId=paymentDao.createTranaction(user.id,request.form.get('psychologist_id'),request.form.get('session_request_id'),request.form.get('seconds_chatted'),cost)
     else:
          paymentDao.updateTranaction(transId,seconds_chatted,cost)
 
