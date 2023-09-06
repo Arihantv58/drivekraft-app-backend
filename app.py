@@ -55,6 +55,12 @@ def updateBusyStatus():
 def setUserOnline():
     return userService.setUserOnline()
 
+@app.route("/api/users/status/busy", methods =['POST'])
+def checkUserBusy():
+    return userService.checkUserBusy()
+
+
+
 @app.route("/api/session/book/request", methods =['POST'])
 def bookRequest():
         return sessionRequestService.sendSessionRequest()
