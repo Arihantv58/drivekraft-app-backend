@@ -102,3 +102,10 @@ def checkUserBusy():
         'is_online': user.is_online
 
     })
+
+def checkUserBalance():
+    user = getUser()
+
+    return jsonify({
+        "credits": user.credits
+    })

@@ -59,6 +59,11 @@ def setUserOnline():
 def checkUserBusy():
     return userService.checkUserBusy()
 
+@app.route("/api/check/user/bal", methods =['POST'])
+def checkUserBalance():
+    return userService.checkUserBalance()
+
+
 
 
 @app.route("/api/session/book/request", methods =['POST'])
