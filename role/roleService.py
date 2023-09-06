@@ -6,7 +6,6 @@ from flask import jsonify
 # this need a refactoring
 def getUserRole():
     user = userService.getUser()
-    print("user role :" + user.role_id )
     role=roleDao.getRoleFromId(user.role_id)
     response = role.__dict__
     pivot= dict()

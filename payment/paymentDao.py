@@ -50,5 +50,18 @@ def updateTranaction(transId,seconds_chatted,cost):
     obj.commit()
     disconnect(obj, mycursor)
 
-    logging.info(f"transaction upated with {tranactionalId} id")
+    logging.info(f"transaction upated with {transId} id")
     return
+
+def updatePamentOrder(razorpay_order_id,razorpay_payment_id,razorpay_signature,gateway):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    sql = f"Update paymentorder set payment_id ='{razorpay_payment_id}' ,signature ='{razorpay_signature}',paymentGateway ='{gateway}',updated_at =now() where order_id ='{razorpay_order_id}'"
+    mycursor.execute(sql)
+    obj.commit()
+    disconnect(obj, mycursor)
+
+    logging.info(f"payment order  upated with {razorpay_order_id} id")
+    return
+
+
