@@ -74,5 +74,7 @@ def getUserRoleID():
     return user.role_id
 
 
-
-
+def addUserCredit(amt):
+    user = getUser()
+    userDao.updateUserBalance(user.id,amt+ user.credits)
+    return

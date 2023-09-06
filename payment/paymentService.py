@@ -84,8 +84,8 @@ def confirmRazorpayOrder():
         if response.status_code == 200:
             responseDict = json.loads(response.text)
             if responseDict['status'] == 'paid':
-                updateOrderStatus(payload['razorpay_order_id'],True)
-                updateUserCredit(responseDict['amount']/100)
+               # paymentDao.updateOrderStatus(payload['razorpay_order_id'],True) will add filed in future and do this
+                userService.addUserCredit(responseDict['amount']/100)
 
                 return jsonify({'msg': 'Your payment id is ' + payload['razorpay_order_id'] + '.', 'status': 'success',
                                 'title': 'Session Booked.'})
