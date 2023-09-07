@@ -58,3 +58,10 @@ def confirmSessionRequest():
             'session': str(sessionRequest.__dict__)
         })
 
+def fetchSessionRequest():
+    user= userService.getUser()
+    return sessionRequestDao.getValidSessionRequest(user.id)
+
+
+
+

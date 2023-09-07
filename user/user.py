@@ -12,5 +12,5 @@ class user:
     self.firebase_password=firebase_password
     self.credits=credits
     self.role_id=role_id
-    self.is_online=is_online
+    self.online=is_online
     self.is_busy=is_busy

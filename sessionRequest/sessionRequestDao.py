@@ -1,7 +1,9 @@
 from db import connect,disconnect
 import logging
 import  configuration.currentTime as currentTime
-from sessionRequest import sessionRequest
+import sessionRequest as sessionRequest
+import user.userService as userService
+
 
 
 def createRequest(listnerId,userId):
@@ -71,3 +73,22 @@ def confirmSessionById(sessionRequestId):
 
     logging.info(f"session with id  {sessionRequestId} has been confirmed")
     return "session has been confirmed"
+
+
+# id,listener_id,is_cancelled,customer_id,status, expiry_at,updated_at,created_at
+def getValidSessionRequest(listner_Id):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    query = f"select id,listener_id,is_cancelled,customer_id,status, expiry_at,updated_at,created_at from sessionRequest where listener_id='{listner_Id}' and now() < expiry_at and status ='false'  and is_cancelled ='false'"
+    mycursor.execute(query)
+    requestList = mycursor.fetchall()
+
+    for data in requestList:
+        SessionRqst=sessionRequest.sessionRequest(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7])
+        user = userService.getUserById(SessionRqst.customer_id)
+
+        rqst=sessionRequest.sessionFetchObject(SessionRqst.id,SessionRqst.listener_id,SessionRqst.customer_id,SessionRqst.expiry_at,SessionRqst.status,user.firebase_id,user.username,SessionRqst.is_cancelled,SessionRqst.updated_at,SessionRqst.created_at)
+        sessionRequest.append(rqst)
+
+    print(sessionRequest)
+    return sessionRequest
