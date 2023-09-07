@@ -59,7 +59,7 @@ def setUserOnline():
 def checkUserBusy():
     return userService.checkUserBusy()
 
-@app.route("/api/check/user/bal", methods =['POST'])
+@app.route("/api/check/user/bal", methods =['GET'])
 def checkUserBalance():
     return userService.checkUserBalance()
 
@@ -78,6 +78,16 @@ def cancelSessionRequest():
 @app.route("/api/session/book/request/verify", methods =['POST'])
 def verifySessionRequest():
         return sessionRequestService.verifySessionRequest()
+
+
+@app.route("/api/session/request/fetch" , methods =['GET'])
+def fetchSessionRequest():
+    rqst= sessionRequestService.fetchSessionRequest()
+
+    return jsonify({
+        "sessions": (rqst.__dict__)
+    })
+
 
 
 @app.route("/api/session/request/confirm", methods =['POST'])
@@ -129,6 +139,6 @@ def confirmRazorpayOrder():
 
 
 
-app.run(debug=True)
+#app.run(debug=True)
 
 

@@ -109,3 +109,6 @@ def checkUserBalance():
     return jsonify({
         "credits": user.credits
     })
+
+def getUserById(id):
+    return userDao.getUserById(id)
