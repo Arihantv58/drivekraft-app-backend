@@ -99,9 +99,11 @@ def checkUserBusy():
 
     return jsonify({
         "is_busy": user.is_busy,
-        'is_online': user.is_online
+        'is_online': user.online
 
     })
+
+
 
 def checkUserBalance():
     user = getUser()

@@ -50,14 +50,15 @@ def checkUserNameIfExists():
 def updateBusyStatus():
     return userService.updateBusyStatus()
 
+@app.route("/api/check/user/busy", methods =['POST'])
+def checkBusyStatus():
+    return userService.checkUserBusy()
+
 
 @app.route("/api/user/online", methods =['POST'])
 def setUserOnline():
     return userService.setUserOnline()
 
-@app.route("/api/users/status/busy", methods =['POST'])
-def checkUserBusy():
-    return userService.checkUserBusy()
 
 @app.route("/api/check/user/bal", methods =['GET'])
 def checkUserBalance():

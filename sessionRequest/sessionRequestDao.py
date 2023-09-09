@@ -82,6 +82,7 @@ def getValidSessionRequest(listner_Id):
     query = f"select id,listener_id,is_cancelled,customer_id,status, expiry_at,updated_at,created_at from sessionRequest where listener_id='{listner_Id}' and now() < expiry_at and status ='false'  and is_cancelled ='false'"
     mycursor.execute(query)
     requestList = mycursor.fetchall()
+    print(query)
 
     for data in requestList:
         SessionRqst=sessionRequest.sessionRequest(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7])
@@ -90,5 +91,5 @@ def getValidSessionRequest(listner_Id):
         rqst=sessionRequest.sessionFetchObject(SessionRqst.id,SessionRqst.listener_id,SessionRqst.customer_id,SessionRqst.expiry_at,SessionRqst.status,user.firebase_id,user.username,SessionRqst.is_cancelled,SessionRqst.updated_at,SessionRqst.created_at)
         sessionRequest.append(rqst)
 
-    print(sessionRequest)
+    print(sessionRequest.__dict__)
     return sessionRequest
