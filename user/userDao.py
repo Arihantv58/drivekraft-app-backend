@@ -53,7 +53,7 @@ def updateUserFirebaseData(userId):
     mycursor.execute(sql)
     obj.commit()
 
-    sql = f"Update psychologist set  firebase_id ='{firebase_id}' , firebase_name ='{firebase_name}' , firebase_email ='{firebase_email}' , firebase_password = '{firebase_password}' , updated ='{now}' where user_id ='{userId}'"
+    sql = f"Update psychologist set  firebase_id ='{firebase_id}' , firebase_name ='{firebase_name}' , firebase_email ='{firebase_email}' , firebase_password = '{firebase_password}' , updated_at ='{now}' where user_id ='{userId}'"
     mycursor.execute(sql)
     obj.commit()
 
