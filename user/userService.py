@@ -59,11 +59,13 @@ def checkUsername():
     id = userDao.getUserByUserName(username)
     if id ==None:
         return jsonify({
-            "Message": "Invalid user",
+            "status": True,
+             "message": "Username is available.",
         })
 
     return jsonify({
-        "Message": "User exist in our system",
+        "status": False,
+        "message": "Username is not available",
     })         
 
 
@@ -114,3 +116,20 @@ def checkUserBalance():
 
 def getUserById(id):
     return userDao.getUserById(id)
+
+
+def confirmUsername():
+    username = request.form.get('username')
+    id = userDao.getUserByUserName(username)
+    if id != None:
+        return jsonify({
+            "status": False,
+            "message": "Username is not available.",
+        })
+
+    user = getUser()
+    userDao.updateUsername(user.id,username)
+    return jsonify({
+        "status": True,
+        "message": "Username registered.",
+    })
