@@ -59,11 +59,13 @@ def checkUsername():
     id = userDao.getUserByUserName(username)
     if id ==None:
         return jsonify({
-            "Message": "Invalid user",
+            "status": True,
+             "message": "Username is available.",
         })
 
     return jsonify({
-        "Message": "User exist in our system",
+        "status": False,
+        "message": "Username is not available",
     })         
 
 
