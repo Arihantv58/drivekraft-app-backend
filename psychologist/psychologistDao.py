@@ -26,10 +26,8 @@ def getPsychologistInOrder():
 def getPsychologistById(psyId):
     obj = connect()
     mycursor = obj.cursor(buffered=True)
-    query = f'''select id,name,profile_image,is_busy,firebase_id,firebase_name,firebase_email,firebase_password,uuid,
-          user_id, description,session_count,rating,
-                   yrs_of_exp,education,short_desc,status,order_,created_at
-                   ,updated_at,gender,age,interests,languages,`online` from psychologist where id ='{psyId}' '''
+    query = f'''select id,name,profile_image,is_busy,firebase_id,firebase_name,firebase_email,firebase_password,uuid,user_id, description,session_count,rating,yrs_of_exp,education,short_desc,status,order_,created_at,updated_at,gender,age,interests,languages,`online` from psychologist where user_id ='{psyId}' '''
+    print("here" +  str(query))
     mycursor.execute(query)
     data = mycursor.fetchone()
 

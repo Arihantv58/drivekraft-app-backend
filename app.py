@@ -51,13 +51,16 @@ def updateBusyStatus():
     return userService.updateBusyStatus()
 
 
+@app.route("/api/check/user/busy", methods =['POST'])
+def checkBusyStatus():
+    return userService.checkUserBusy()
+
+
 @app.route("/api/user/online", methods =['POST'])
 def setUserOnline():
     return userService.setUserOnline()
 
-@app.route("/api/users/status/busy", methods =['POST'])
-def checkUserBusy():
-    return userService.checkUserBusy()
+
 
 @app.route("/api/check/user/bal", methods =['GET'])
 def checkUserBalance():
@@ -85,7 +88,7 @@ def fetchSessionRequest():
     rqst= sessionRequestService.fetchSessionRequest()
 
     return jsonify({
-        "sessions": (rqst.__dict__)
+        "sessions": (rqst)
     })
 
 
@@ -130,11 +133,11 @@ def appVersion():
 
 @app.route("/api/order/placed", methods =['POST'])
 def placeRazorpayOrder():
-    paymentService.placeRazorpayOrder()
+    return paymentService.placeRazorpayOrder()
 
 @app.route("/api/order/confirm", methods =['POST'])
 def confirmRazorpayOrder():
-    paymentService.confirmRazorpayOrder()
+    return paymentService.confirmRazorpayOrder()
 
 
 
