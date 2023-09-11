@@ -46,6 +46,10 @@ def getUSer():
 def checkUserNameIfExists():
     return userService.checkUsername()
 
+@app.route("/api/username/check/confirm", methods =['POST'])
+def confirmUserName():
+    return userService.confirmUsername()
+
 @app.route("/api/users/status/busy", methods =['POST'])
 def updateBusyStatus():
     return userService.updateBusyStatus()

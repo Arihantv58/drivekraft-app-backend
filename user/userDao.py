@@ -118,3 +118,15 @@ def updateUserAvailStatus(user_id,status):
 
     logging.info(f"user status  updated to  {status} for user {user_id}")
     return
+
+
+def updateUsername(user_id,username):
+    obj = connect()
+    mycursor = obj.cursor(buffered=True)
+    sql = f"Update user set username ='{username}',updated =now() where id ='{user_id}'"
+    mycursor.execute(sql)
+    obj.commit()
+    disconnect(obj, mycursor)
+
+    logging.info(f"usermane  updated to  {username} for user {user_id}")
+    return
