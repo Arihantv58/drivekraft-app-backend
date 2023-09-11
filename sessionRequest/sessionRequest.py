@@ -8,4 +8,3 @@ class sessionRequest:
     self.expiry_at=str(expiry_at)
     self.updated_at = str(updated_at)
     self.created_at = str(created_at)
-Q

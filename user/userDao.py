@@ -52,6 +52,11 @@ def updateUserFirebaseData(userId):
     sql = f"Update user set  firebase_id ='{firebase_id}' , firebase_name ='{firebase_name}' , firebase_email ='{firebase_email}' , firebase_password = '{firebase_password}' , updated ='{now}' where id ='{userId}'"
     mycursor.execute(sql)
     obj.commit()
+
+    sql = f"Update psychologist set  firebase_id ='{firebase_id}' , firebase_name ='{firebase_name}' , firebase_email ='{firebase_email}' , firebase_password = '{firebase_password}' , updated ='{now}' where user_id ='{userId}'"
+    mycursor.execute(sql)
+    obj.commit()
+
     disconnect(obj, mycursor)
     logging.info(f"user with user id {userId} updated")
     return "user is updated"

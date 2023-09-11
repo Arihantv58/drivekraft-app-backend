@@ -15,8 +15,8 @@ def sendSessionRequest():
 
     sessionRequest=sessionRequestDao.getLastRequestByUserId(token.userId)
 
-    return ({
-        'data': str(sessionRequest.__dict__)
+    return jsonify({
+        'data': sessionRequest.__dict__
     })
 
 def cancelSessionRequest():
@@ -24,27 +24,27 @@ def cancelSessionRequest():
     sessionRequestId = request.form.get('session_request_id')
     sessionRequestDao.cancelSessionRequestBySessionId(sessionRequestId)
 
-    return ({
+    return jsonify({
         'status' : 'Success',
         'message': "Session request cancelled.",
     })
 
 def verifySessionRequest():
-    obj = json.loads(request.data)
+    #obj = json.loads(request.data)
     sessionRequestId = request.form.get('session_request_id')
 
     sessionRequest=sessionRequestDao.verifySessionRequestBySessionId(sessionRequestId)
 
-    return ({
-        'session': str(sessionRequest.__dict__)
+    return jsonify({
+        'session': (sessionRequest.__dict__)
     })
 
 def confirmSessionRequest():
-    obj = json.loads(request.data)
+    #obj = json.loads(request.data)
     sessionRequestId = request.form.get('session_request_id')
 
     if sessionRequestDao.isExpiredOrCancelled(sessionRequestId)== True:
-        return ({
+        return jsonify({
             "status": "Error",
             "message": "Session request either expired or cancelled."
         })
@@ -52,10 +52,10 @@ def confirmSessionRequest():
         sessionRequestDao.confirmSessionById(sessionRequestId)
         sessionRequest = sessionRequestDao.verifySessionRequestBySessionId(sessionRequestId)
 
-        return ({
+        return jsonify({
             "status": "Success",
             "message": "Session request successfully confirmed.",
-            'session': str(sessionRequest.__dict__)
+            'sessions': sessionRequest.__dict__
         })
 
 def fetchSessionRequest():

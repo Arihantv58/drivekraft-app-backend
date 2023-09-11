@@ -30,11 +30,11 @@ def createRazorpayOrder():
 
 def placeRazorpayOrder():
     user= userService.getUser()
-    obj = json.loads(request.data)
+    #obj = json.loads(request.data)
     transId = request.form.get('transaction_id')
 
     if user.credits<5 :
-        return ({
+        return jsonify({
             "user_credits": user.credits,
             "status": "Error",
             "msg":'Insufficient credits'
@@ -42,7 +42,7 @@ def placeRazorpayOrder():
 
     transactional = paymentDao.getTransactionaByTransId(transId)
     seconds_chatted = request.form.get('seconds_chatted')
-    cost = int((seconds_chatted + 60)/60) * 5;
+    cost = int((int(seconds_chatted) + 60)/60) * 5
 
     if transactional== None:
          transId=paymentDao.createTranaction(user.id,request.form.get('psychologist_id'),request.form.get('session_request_id'),request.form.get('seconds_chatted'),cost)
@@ -59,8 +59,8 @@ def placeRazorpayOrder():
     if user.credits <5:
         availability = False
 
-    return ({
-        "transaction": paymentDao.getTransactionaByTransId(transId),
+    return jsonify({
+        "transaction": (paymentDao.getTransactionaByTransId(transId)).__dict__,
         "user_credits": user.credits,
         "credits_availablility": availability,
         "credits_sufficient_for_five_minutes": sufficent_balance
