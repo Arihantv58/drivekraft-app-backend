@@ -8,6 +8,7 @@ import role.roleService as roleService
 import psychologist.psychologistService as psychologistService
 import sessionRequest.sessionRequestService as sessionRequestService
 import payment.paymentService as paymentService
+import feedback.feedbackService as feedbackService
 
 
 app = Flask(__name__)
@@ -144,7 +145,9 @@ def confirmRazorpayOrder():
     return paymentService.confirmRazorpayOrder()
 
 
-
+@app.route("/api/reviews", methods =['POST'])
+def updateFeedback():
+    return feedbackService.updateFeedback()
 
 #app.run(debug=True)
 
