@@ -140,3 +140,5 @@ CREATE TABLE sessionFeedback(
         created_at DATETIME,
         updated_at DATETIME
         );
+
+ALTER TABLE psychologist ADD enable bool  DEFAULT true;
