@@ -149,6 +149,6 @@ def confirmRazorpayOrder():
 def updateFeedback():
     return feedbackService.updateFeedback()
 
-#app.run(debug=True)
+app.run(debug=True)
 
 
