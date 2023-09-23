@@ -20,7 +20,6 @@ def sendSessionRequest():
     })
 
 def cancelSessionRequest():
-    obj = json.loads(request.data)
     sessionRequestId = request.form.get('session_request_id')
     sessionRequestDao.cancelSessionRequestBySessionId(sessionRequestId)
 

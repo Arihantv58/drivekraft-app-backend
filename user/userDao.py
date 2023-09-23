@@ -92,7 +92,7 @@ def updateUsetStatus(user_id,status):
     mycursor.execute(sql)
     obj.commit()
 
-    sql = f"Update psychologist set is_busy ='{status}',updated =now() where user_id ='{user_id}'"
+    sql = f"Update psychologist set is_busy ='{status}',updated_at =now() where user_id ='{user_id}'"
     mycursor.execute(sql)
     obj.commit()
 
@@ -122,12 +122,12 @@ def updateUserAvailStatus(user_id,status):
     mycursor.execute(sql)
     obj.commit()
 
-    sql = f"Update psychologist set online ='{status}',updated =now() where user_id ='{user_id}'"
+    sql = f"Update psychologist set online ='{status}',updated_at =now() where user_id ='{user_id}'"
     mycursor.execute(sql)
     obj.commit()
     disconnect(obj, mycursor)
 
-    logging.info(f"user status  updated to  {status} for user {user_id}")
+    logging.info(f"user status  updated_at to  {status} for user {user_id}")
     return
 
 
