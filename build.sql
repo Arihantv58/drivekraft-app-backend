@@ -130,3 +130,15 @@ CREATE TABLE transaction(
 
 
 ALTER TABLE psychologist MODIFY profile_image char(50);
+
+-- creating table sessionFeedabck
+CREATE TABLE sessionFeedback(
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        sessionId INT,
+        feedback LONGTEXT,
+        rating INT,
+        created_at DATETIME,
+        updated_at DATETIME
+        );
+
+ALTER TABLE psychologist ADD enable bool  DEFAULT true;

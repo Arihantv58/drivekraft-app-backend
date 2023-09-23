@@ -3,7 +3,7 @@ import  role.role as role
 import logging
 
 def getRoleFromId(role_id):
-    obj = connect()
+    connection_pool,obj = connect()
     mycursor = obj.cursor(buffered=True)
     query = f"select id,name, label,created_at,updated_at from role where id='{role_id}'"
     print(query)
