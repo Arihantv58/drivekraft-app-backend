@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,request,render_template
+from flask import Flask,jsonify,request
 import logging
 import json
 import configuration.logfileConfigs as logfileConfigs
@@ -8,7 +8,6 @@ import role.roleService as roleService
 import psychologist.psychologistService as psychologistService
 import sessionRequest.sessionRequestService as sessionRequestService
 import payment.paymentService as paymentService
-import feedback.feedbackService as feedbackService
 
 
 app = Flask(__name__)
@@ -20,21 +19,6 @@ def index():
     logging.info("testt")
     return "test"
 
-@app.route("/home")
-def home():
-    return render_template("index.html")
-
-@app.route("/about.html")
-def about():
-    return render_template("about.html")
-
-@app.route("/contact.html")
-def contact():
-    return render_template("contact.html")
-
-@app.route("/blog.html")
-def blog():
-    return render_template("blog.html")
 
 @app.route("/api/login-send-otp",methods=['POST'])
 def sendOtp():
@@ -160,10 +144,8 @@ def confirmRazorpayOrder():
     return paymentService.confirmRazorpayOrder()
 
 
-@app.route("/api/reviews", methods =['POST'])
-def updateFeedback():
-    return feedbackService.updateFeedback()
 
-app.run(debug=True)
+
+#app.run(debug=True)
 
 
