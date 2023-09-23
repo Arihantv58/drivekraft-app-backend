@@ -56,7 +56,7 @@ def updateTranaction(transId,seconds_chatted,cost):
 def updatePamentOrder(razorpay_order_id,razorpay_payment_id,razorpay_signature,gateway):
     obj = connect()
     mycursor = obj.cursor(buffered=True)
-    sql = f"Update paymentorder set payment_id ='{razorpay_payment_id}' ,signature ='{razorpay_signature}',paymentGateway ='{gateway}',updated_at =now() where order_id ='{razorpay_order_id}'"
+    sql = f"Update paymentOrder set payment_id ='{razorpay_payment_id}' ,signature ='{razorpay_signature}',paymentGateway ='{gateway}',updated_at =now() where order_id ='{razorpay_order_id}'"
     mycursor.execute(sql)
     obj.commit()
     disconnect(obj, mycursor)
