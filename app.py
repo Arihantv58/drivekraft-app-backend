@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,request
+from flask import Flask,jsonify,request,render_template
 import logging
 import json
 import configuration.logfileConfigs as logfileConfigs
@@ -20,6 +20,21 @@ def index():
     logging.info("testt")
     return "test"
 
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
+@app.route("/about.html")
+def about():
+    return render_template("about.html")
+
+@app.route("/contact.html")
+def contact():
+    return render_template("contact.html")
+
+@app.route("/blog.html")
+def blog():
+    return render_template("blog.html")
 
 @app.route("/api/login-send-otp",methods=['POST'])
 def sendOtp():
