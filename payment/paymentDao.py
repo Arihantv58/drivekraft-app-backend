@@ -22,7 +22,7 @@ def getTransactionaByTransId(transId):
     query = f"select id,transaction_id, userId,psychologist_id,session_request_id,seconds_chatted,amount_deducted,created_at,updated_at from transaction where transaction_id='{transId}'"
     mycursor.execute(query)
     data = mycursor.fetchone()
-
+    disconnect(connection_pool, obj, mycursor)
     if data == None:
         return None
     return transaction.transaction(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8])

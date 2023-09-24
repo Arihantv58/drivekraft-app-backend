@@ -39,9 +39,15 @@ def connect():
 #     return connection
 
 def disconnect(connection_pool,connection_object,cursor):
-    if cursor:
-        cursor.close()
+    # if(connection_object.is_connected()):
+    #     cursor.close()
+    #     connection_object.close()
 
-        # Release the connection back to the pool
+    print("release connection to pool")
+
+    if cursor:
+         cursor.close()
+
+    #     # Release the connection back to the pool
     if connection_object:
-        connection_pool.release_connection(connection_object)
+         connection_object.close()

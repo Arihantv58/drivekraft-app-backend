@@ -9,6 +9,7 @@ def getRoleFromId(role_id):
     print(query)
     mycursor.execute(query)
     data = mycursor.fetchone()
+    disconnect(connection_pool, obj, mycursor)
 
     if data == None:
         return None

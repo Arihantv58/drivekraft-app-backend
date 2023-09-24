@@ -12,6 +12,8 @@ def getPsychologistInOrder():
     mycursor.execute(query)
     psyData = mycursor.fetchall()
 
+    disconnect(connection_pool, obj, mycursor)
+
     psychologistList= list()
 
     for data in psyData:
@@ -30,6 +32,7 @@ def getPsychologistById(psyId):
     print("here" +  str(query))
     mycursor.execute(query)
     data = mycursor.fetchone()
+    disconnect(connection_pool, obj, mycursor)
 
     if data == None:
         return None
