@@ -3,12 +3,12 @@ import  psychologist.psychologist as psychologist
 import json
 
 def getPsychologistInOrder():
-    connection_pool,obj = connect()
+    obj = connect()
     mycursor = obj.cursor(buffered=True)
     query = '''select id,name,profile_image,is_busy,firebase_id,firebase_name,firebase_email,firebase_password,uuid,
       user_id, description,session_count,rating,
                yrs_of_exp,education,short_desc,status,order_,created_at
-               ,updated_at,gender,age,interests,languages,`online` from psychologist  where enable ='1' order by `online` desc , is_busy '''
+               ,updated_at,gender,age,interests,languages,`online` from psychologist order by `online` desc , is_busy '''
     mycursor.execute(query)
     psyData = mycursor.fetchall()
 
@@ -24,7 +24,7 @@ def getPsychologistInOrder():
 
 
 def getPsychologistById(psyId):
-    connection_pool,obj = connect()
+    obj = connect()
     mycursor = obj.cursor(buffered=True)
     query = f'''select id,name,profile_image,is_busy,firebase_id,firebase_name,firebase_email,firebase_password,uuid,user_id, description,session_count,rating,yrs_of_exp,education,short_desc,status,order_,created_at,updated_at,gender,age,interests,languages,`online` from psychologist where user_id ='{psyId}' '''
     print("here" +  str(query))

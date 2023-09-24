@@ -4,7 +4,6 @@ import requests
 import payment.paymentDao as paymentDao
 import user.userService as userService
 import user.userDao as userDao
-import logging
 def createRazorpayOrder():
     amount=request.form.get('amount')
 
@@ -68,17 +67,11 @@ def placeRazorpayOrder():
     })
 
 def confirmRazorpayOrder():
-
-    response_string = request.form.get('response')
-    print(response_string)
-    payload = json.loads(response_string)
-    print(payload)
+    payload = request.json
     if 'razorpay_payment_id' in payload:
-        print("aaa")
         paymentDao.updatePamentOrder(payload['razorpay_order_id'],payload['razorpay_payment_id'],payload['razorpay_signature'],'razorpay')
-        print("bbb")
+
         url = f"https://api.razorpay.com/v1/orders/{payload['razorpay_order_id']}"
-        print(url)
 
         payload = {}
         headers = {
@@ -87,11 +80,11 @@ def confirmRazorpayOrder():
         }
 
         response = requests.request("GET", url, headers=headers, data=payload)
-        logging.info(response.status_code)
+
         if response.status_code == 200:
             responseDict = json.loads(response.text)
             if responseDict['status'] == 'paid':
-               #paymentDao.updateOrderStatus(payload['razorpay_order_id'],True) #will add filed in future and do this
+               # paymentDao.updateOrderStatus(payload['razorpay_order_id'],True) will add filed in future and do this
                 userService.addUserCredit(responseDict['amount']/100)
 
                 return jsonify({'msg': 'Your payment id is ' + payload['razorpay_order_id'] + '.', 'status': 'success',
