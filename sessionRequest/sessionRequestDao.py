@@ -23,7 +23,7 @@ def getLastRequestByUserId(userId):
     query = f"select id,listener_id,is_cancelled,customer_id,status, expiry_at,updated_at,created_at from sessionRequest where customer_id='{userId}' order by id desc limit 1"
     mycursor.execute(query)
     data = mycursor.fetchone()
-
+    disconnect(connection_pool, obj, mycursor)
     if data == None:
         return None
     return sessionRequest.sessionRequest(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7])
@@ -49,7 +49,7 @@ def verifySessionRequestBySessionId(sessionRequestId):
     mycursor.execute(query)
     data = mycursor.fetchone()
     print(query)
-
+    disconnect(connection_pool, obj, mycursor)
     if data == None:
         return None
     return sessionRequest.sessionRequest(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7])
@@ -61,6 +61,7 @@ def isExpiredOrCancelled(sessionRequestId):
     query = f"select id from sessionRequest  where id='{sessionRequestId}' and (expiry_at >= now() or is_cancelled =1 )"
     mycursor.execute(query)
     data = mycursor.fetchone()
+    disconnect(connection_pool, obj, mycursor)
 
     if data == None:
         return True
@@ -88,6 +89,7 @@ def getValidSessionRequest(listner_Id):
     mycursor.execute(query)
     requestList = mycursor.fetchall()
     print(query)
+    disconnect(connection_pool, obj, mycursor)
 
     sessionRequestList = list()
 

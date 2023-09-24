@@ -21,6 +21,7 @@ def getUserByContact(contactNumber):
     query = f"select id,name, username ,emailId,contact,totalSessions,firebase_id,firebase_name,firebase_email,firebase_password,credits,role_id,is_online,is_busy from user where contact='{contactNumber}'"
     mycursor.execute(query)
     data = mycursor.fetchone()
+    disconnect(connection_pool, obj, mycursor)
 
     if data == None:
         return None
@@ -33,6 +34,7 @@ def getUserById(userId):
     query = f"select id,name,username, emailId,contact,totalSessions,firebase_id,firebase_name,firebase_email,firebase_password,credits,role_id,is_online,is_busy from user where id='{userId}'"
     mycursor.execute(query)
     data = mycursor.fetchone()
+    disconnect(connection_pool, obj, mycursor)
 
     if data == None:
         return None
@@ -68,6 +70,7 @@ def getUserByUserName(username):
     query = f"select id from user where username='{username}'"
     mycursor.execute(query)
     data = mycursor.fetchone()
+    disconnect(connection_pool, obj, mycursor)
 
     if data == None:
         return None

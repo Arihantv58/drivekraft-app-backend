@@ -20,6 +20,7 @@ def getLastOtpByUserId(userId):
     query = f"select id,userId,otpvalue, state,created from otp where userId='{userId}' order by id desc limit 1"
     mycursor.execute(query)
     data = mycursor.fetchone()
+    disconnect(connection_pool, obj, mycursor)
 
     if data == None:
         return None
@@ -44,6 +45,7 @@ def getTokenFromValueInternally(tokenValue):
     query = f"select id,userId,tokenvalue, created,expireAt from token where tokenvalue='{tokenValue}' order by id desc limit 1"
     mycursor.execute(query)
     data = mycursor.fetchone()
+    disconnect(connection_pool, obj, mycursor)
 
     if data == None:
         return None
